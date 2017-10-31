@@ -58,5 +58,78 @@ If we try to set a number to the **mpv** function (see the example bellow), the 
 mpv(23);
 ```
 
+## Default Parameters
+
+By default, in TypeScript every parameter is required by the function. Let's see an example that is expected two parameters:
+
+```
+function sum(n1:number, n2:number):number {
+	return n1 + n2
+}
+
+sum(2, 3);
+
+// > 5
+```
+
+But if we call the function passing **just one parameter**, the compiler will throw an error. See the example:
+
+```
+sum(2);
+
+// > Expected 2 arguments, but got 1.
+
+```
+
+## Optional Parameters
+
+But hey! Actually there is a way to set the parameter as an optional one. To do it, we need to add a *?* to the end of the parameter.
+
+```
+function buildName(firstName: string, lasName?: string) {
+	if (lastName)
+		return firstName + ' ' + lastName;
+	else
+		return firstName;
+}
+
+let result1 = buildName('Chico');
+// > Chico
+
+let result2 = buildName('Chico', 'Silva');
+// > Chico Silva
+
+let result3 = buildName('Chico', 'Silva', 'Mr');
+// > Expected 1-2 arguments, but got 3
+```
+
+## Rest Parameters
+
+TypeScript allows you to pass multiple values to the last parameter. This way, the compiler will build an array of the arguments passed in. 
+
+First, let's see an example of a function not using the **Rest Parameter**. Note that when calling the function, we need to pass the values as an array:
+
+```
+function countPoints(points: number[]): number {
+	return points.reduce((a,b) => a + b, 0)
+}
+
+countPoints([2, 3, 1]);
+
+// > 6
+```
+
+Now, take a look at the same function bellow, but using the **Rest Parameter**, that is, writing the parameter with the ellipsis (**...**). Note that when calling the function, all we need is pass the numbers, not worrying to pass as an array:
+
+```
+function countPoints(points: ...number[]): number {
+	return points.reduce((a,b) => a + b, 0)
+}
+
+countPoints(2, 3, 1);
+```
+
+
+
 
 
