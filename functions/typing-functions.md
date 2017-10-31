@@ -38,6 +38,25 @@ But if the arguments is not a *string*, for example, the compiler will throw an 
 console.log(foulOut("6"));
 ```
 
+## Arrow functions
+
+TypeScript allows you to define that a variable will become a function. The following example shows it, with the return set to **void**, that is, there's no return:
+
+```
+let mpv:(name:string)=> void;
+
+mpv = name => console.log('The MVP of the season is ' + name + '!');
+
+mpv('King James');
+
+> The MVP of the season is King James
+```
+
+If we try to set a number to the **mpv** function (see the example bellow), the compiler will throw an error message saying that *"Argument of type '23' is not assignable to parameter of type 'string"*
+
+```
+mpv(23);
+```
 
 
 
