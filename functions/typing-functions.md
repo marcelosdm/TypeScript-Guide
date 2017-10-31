@@ -122,7 +122,7 @@ countPoints([2, 3, 1]);
 Now, take a look at the same function bellow, but using the **Rest Parameter**, that is, writing the parameter with the ellipsis (**...**). Note that when calling the function, all we need is pass the numbers, not worrying to pass as an array:
 
 ```
-function countPoints(points: ...number[]): number {
+function countPoints(...points: number[]): number {
 	return points.reduce((a,b) => a + b, 0)
 }
 
