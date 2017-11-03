@@ -50,5 +50,10 @@ class ProgrammingLanguage {
 
 ```
 
+To create an object from this class, we use the key word **new** followed by the name of the class and passing the parameter. See bellow:
+
+```typescript
+    let programming = new ProgrammingLanguage('TypeScript');
+```
 
 
