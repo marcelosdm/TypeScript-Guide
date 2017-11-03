@@ -21,11 +21,17 @@ Classes are created by using the key word *class*, followed by the class name. T
 Basically, the class can have:
 - **properties/attributes**;
 - **constructor**;
--- **methods**. 
-In this case, the property *language* is a public property, by default. That means, other objects can access and change its value.
-The **constructor**, is used to initialize those 
+- **methods**. 
 
-See the example bellow:
+In this case, the property *language* is a public property, by default. That means, other objects can access and change its value.
+The **constructor**, is used to initialize the objects created in this class. 
+You can see that when we refer to one object of the class we prepend *this*.
+
+See the example bellow. Our class has three members:
+
+- a property called **language**;
+- a **constructor**;
+- a method called **message**.
 
 ```
 class ProgrammingLanguage {
