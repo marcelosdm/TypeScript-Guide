@@ -35,19 +35,18 @@ See the example bellow. Our class has three members:
 
 ```
 class ProgrammingLanguage {
-
-	language: string;
-	
-	constructor (message: string) {
-		this.language = message;
-	}
-	
-	message() {
-		return 'I love ' + this.language;
-	}
-}
-
-let programming = new ProgrammingLanguage('TypeScript');
+    
+        language: string;
+        
+        constructor (message: string) {
+            this.language = message;
+        }
+        
+        message() {
+            // return 'I love ' + this.language;
+            console.log('I love ' + this.language);
+        }
+    }
 
 ```
 
