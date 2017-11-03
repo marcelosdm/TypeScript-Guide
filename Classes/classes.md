@@ -33,7 +33,7 @@ See the example bellow. Our class has three members:
 - a **constructor**;
 - a method called **message**.
 
-```
+```typescript
 class ProgrammingLanguage {
     
         language: string;
