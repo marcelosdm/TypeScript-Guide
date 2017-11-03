@@ -13,3 +13,37 @@ For example, we can create a house class . Then we can construct houses based on
 We can even use this class to create more complex houses, but **extending** the same class, without rewriting the same code again.
 
 An **object** is an instance of the class. That is, we can create as many objects as we need.
+
+## Defining a Class
+
+Classes are created by using the key word *class*, followed by the class name. The convention for it, is to use the UpperCamelCase.
+
+Basically, the class can have:
+- **properties/attributes**;
+- **constructor**;
+-- **methods**. 
+In this case, the property *language* is a public property, by default. That means, other objects can access and change its value.
+The **constructor**, is used to initialize those 
+
+See the example bellow:
+
+```
+class ProgrammingLanguage {
+
+	language: string;
+	
+	constructor (message: string) {
+		this.language = message;
+	}
+	
+	message() {
+		return 'I love ' + this.language;
+	}
+}
+
+let programming = new ProgrammingLanguage('TypeScript');
+
+```
+
+
+
