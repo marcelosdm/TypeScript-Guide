@@ -6,13 +6,15 @@ As written in the [TypeScript documentation](https://www.typescriptlang.org/docs
 
 So, let's take a look on those different *basic* data types:
 
-1. ```let isStater: boolean```
+```typescript
+let isStarter: boolean
 
-2. ```let points: number```
+let points: number
 
-3. ```let name: string```
+let name: string
 
-4. ```let name: any```
+let name: any
+```
 
 The type *"any"*, can be set manually or by default.
 If a variable is set to the type *"any"*, it will work exactly as a **JavaScript** variable, that is, when it has a value of another type assigned to it later, the compiler **won't be able to detect a problem**.
