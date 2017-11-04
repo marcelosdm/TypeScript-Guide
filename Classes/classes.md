@@ -62,7 +62,7 @@ Finally, to show the message in the console, we can call the method, like this:
     programming.message();
 ```
 
-## Making Things Easier
+### Making Things Easier
 
 Another way to declare a class, is to put either the word *public*, or the word *private* before the constructor argument. Note that the property is now the constructor argument. You can even test the code by creating an object and calling the *message* method to see the result in the console, as we did above.
 
@@ -80,3 +80,4 @@ Another way to declare a class, is to put either the word *public*, or the word 
 
 ```
 
+## Inheritance
