@@ -13,7 +13,7 @@ As the reference above shows, here we'll see some new capabilities to the functi
 
 Let's take a look on a basic **TypeScript** function. Here, we're typing the parameter, but as there's no return, its type is set to *void*:
 
-```
+```typescript
 function threePointPlay(player: string):void {
 	console.log('Three point play by ' + player)
 }
@@ -21,20 +21,20 @@ function threePointPlay(player: string):void {
 
 In the next example, we can see both the **parameter** and the **return** typed:
 
-```
+```typescript
 	let foulOut = function(foulsNum:number):boolean {
 		return foulsNum > 5
 }
 ```
 In the **foulOut** function, we can see that if the arguments is set correctly, the function works:
 
-```
+```typescript
 console.log(foulOut(6));
 > true
 ```
 
 But if the arguments is not a *string*, for example, the compiler will throw an error:
-```
+```typescript
 console.log(foulOut("6"));
 ```
 
@@ -42,7 +42,7 @@ console.log(foulOut("6"));
 
 TypeScript allows you to define that a variable will become a function. The following example shows it, with the return set to **void**, that is, there's no return:
 
-```
+```typescript
 let mpv:(name:string)=> void;
 
 mpv = name => console.log('The MVP of the season is ' + name + '!');
@@ -54,7 +54,7 @@ mpv('King James');
 
 If we try to set a number to the **mpv** function (see the example bellow), the compiler will throw an error message saying that *"Argument of type '23' is not assignable to parameter of type 'string"*
 
-```
+```typescript
 mpv(23);
 ```
 
@@ -62,7 +62,7 @@ mpv(23);
 
 By default, in TypeScript every parameter is required by the function. Let's see an example that is expected two parameters:
 
-```
+```typescript
 function sum(n1:number, n2:number):number {
 	return n1 + n2
 }
@@ -74,7 +74,7 @@ sum(2, 3);
 
 But if we call the function passing **just one parameter**, the compiler will throw an error. See the example:
 
-```
+```typescript
 sum(2);
 
 // > Expected 2 arguments, but got 1.
@@ -85,7 +85,7 @@ sum(2);
 
 But hey! Actually there is a way to set the parameter as an optional one. To do it, we need to add a *?* to the end of the parameter.
 
-```
+```typescript
 function buildName(firstName: string, lasName?: string) {
 	if (lastName)
 		return firstName + ' ' + lastName;
@@ -109,7 +109,7 @@ TypeScript allows you to pass multiple values to the last parameter. This way, t
 
 First, let's see an example of a function not using the **Rest Parameter**. Note that when calling the function, we need to pass the values as an array:
 
-```
+```typescript
 function countPoints(points: number[]): number {
 	return points.reduce((a,b) => a + b, 0)
 }
@@ -121,7 +121,7 @@ countPoints([2, 3, 1]);
 
 Now, take a look at the same function bellow, but using the **Rest Parameter**, that is, writing the parameter with the ellipsis (**...**). Note that when calling the function, all we need is pass the numbers, not worrying to pass as an array:
 
-```
+```typescript
 function countPoints(...points: number[]): number {
 	return points.reduce((a,b) => a + b, 0)
 }
