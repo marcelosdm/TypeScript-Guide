@@ -35,18 +35,18 @@ See the example bellow. Our class has three members:
 
 ```typescript
 class ProgrammingLanguage {
-    
-        language: string;
-        
-        constructor (message: string) {
-            this.language = message;
-        }
-        
-        message() {
-            // return 'I love ' + this.language;
-            console.log('I love ' + this.language);
-        }
+
+    language: string;
+
+    constructor (lang: string) {
+        this.language = lang;
     }
+    
+    message() {
+        console.log(`I love ${this.language}`);
+    }
+}
+
 
 ```
 
@@ -56,4 +56,27 @@ To create an object from this class, we use the key word **new** followed by the
     let programming = new ProgrammingLanguage('TypeScript');
 ```
 
+Finally, to show the message in the console, we can call the method, like this:
+
+```typescript
+    programming.message();
+```
+
+## Making Things Easier
+
+Another way to declare a class, is to put either the word *public*, or the word *private* before the constructor argument. Note that the property is now the constructor argument. You can even test the code by creating an object and calling the *message* method to see the result in the console, as we did above.
+
+```typescript
+    class ProgrammingLanguage {
+
+    constructor (public language: string) {
+
+    }
+    
+    message() {
+        console.log(`I love ${this.language}`);
+    }
+}
+
+```
 
