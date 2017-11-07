@@ -32,3 +32,13 @@ export { PlayerStats }
 ```
 
 Some will say that it's a better way to keep things organized.
+Another thing that can be done, is export the declaration with another name, if necessary:
+
+```typescript
+interface PlayerStats {
+  points?: number;
+  rebounds?: number;
+}
+
+export { PlayerStats as PStats }
+```
