@@ -43,3 +43,11 @@ interface PlayerStats {
 
 export { PlayerStats as PStats }
 ```
+
+## Import
+
+To import a declaration is very easy, and can be done simply by using the key word **import** followed by the declaration name in between braces and the path where the file containing the declaration is located. Note that we don't need to specify the file extension.
+
+```typescript
+import { Player as plr} from './ClassPlayer';
+```
