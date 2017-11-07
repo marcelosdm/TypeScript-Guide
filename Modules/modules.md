@@ -31,7 +31,8 @@ interface PlayerStats {
 export { PlayerStats }
 ```
 
-Some will say that it's a better way to keep things organized.
+Some will say that it's a better way to keep things organized, and easier to read.
+
 Another thing that can be done, is export the declaration with another name, if necessary:
 
 ```typescript
